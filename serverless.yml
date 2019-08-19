@@ -1,0 +1,14 @@
+service: poetry-bug
+provider:
+  name: aws
+  runtime: python3.7
+functions:
+  hello:
+    handler: handler.hello
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    usePoetry: false
